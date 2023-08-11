@@ -12,7 +12,7 @@ var collection *mongo.Collection
 var ctx = context.TODO()
 
 func init() {
-	clientOptions := options.Client().ApplyURI("mongodb://172.17.0.2:27017/")
+	clientOptions := options.Client().ApplyURI("mongodb://[ip]:[port]/[user]?:[pass]?")
 	client, err := mongo.Connect(ctx, clientOptions)
 	if err != nil {
 		log.Fatal(err)
